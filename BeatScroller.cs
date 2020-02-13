@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ public class BeatScroller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		beatTempo = beatTempo;
+		beatTempo = beatTempo / 60;
 	}
 	
 	// Update is called once per frame
@@ -17,14 +17,15 @@ public class BeatScroller : MonoBehaviour {
 		
 		if(!hasStarted)
         {
-	    /*		if(Input.anyKeyDown)
-            {
-				hasStarted = true;
-            }*/
+			//if(Input.anyKeyDown)
+   //         {
+			//	hasStarted = true;
+   //         }
         }
 		else
         {
-			transform.position -= new Vector3(-beatTempo * Time.deltaTime, 0f, 0f);
+			transform.position -= new Vector3(beatTempo * Time.deltaTime, 0f, 0f);
         }
 	}
 }
+
