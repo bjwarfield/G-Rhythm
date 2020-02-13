@@ -7,8 +7,8 @@ public class ButtonController : MonoBehaviour {
 	private SpriteRenderer theSR;
 	public Sprite defaultImage;
 	public Sprite pressedImage;
-
-	public KeyCode keyToPress;
+	public KeyCode AttackTwo;
+	public KeyCode AttackOne;
 	// Use this for initialization
 	void Start () {
 		theSR = GetComponent<SpriteRenderer>();
@@ -19,12 +19,20 @@ public class ButtonController : MonoBehaviour {
 
 
 
-		if(Input.GetKeyDown(keyToPress))
+		if(Input.GetKeyDown(AttackOne))
         {
 			theSR.sprite = pressedImage;
         }
-
-		if(Input.GetKeyUp(keyToPress))
+		if(Input.GetKeyDown(AttackTwo))
+	{
+			theSR.sprite = pressedImage;
+	}
+		
+		if(Input.GetKeyUp(AttackTwo))
+	{
+			theSR.sprite = pressedImage;
+	}
+		if(Input.GetKeyUp(AttackOne))
         {
 			theSR.sprite = defaultImage;
         }
