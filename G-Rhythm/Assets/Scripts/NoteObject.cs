@@ -35,6 +35,7 @@ public class NoteObject : MonoBehaviour {
 		{
 			gameObject.SetActive(false);
 		}
+
 	}
 	
 	private void OnTriggerExit2D(Collider2D other)
