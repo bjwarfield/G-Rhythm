@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theMusic: {fileID: 685821401}
+  zoneController: {fileID: 86246848}
   startPlaying: 0
   theBS: {fileID: 1705913609}
 --- !u!4 &3464098
@@ -264,7 +265,7 @@ GameObject:
   - component: {fileID: 86246851}
   - component: {fileID: 86246853}
   m_Layer: 0
-  m_Name: Target-White
+  m_Name: Zone
   m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

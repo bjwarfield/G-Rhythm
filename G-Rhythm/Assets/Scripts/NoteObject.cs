@@ -18,10 +18,25 @@ public class NoteObject : MonoBehaviour {
         {
 			if(canBePressed)
             {
+				
 				gameObject.SetActive(false);
+				float offset = Mathf.Abs( this.transform.position.x - GameManager.instance.zoneController.transform.position.x );
+				//Debug.Log("Click Offset: " +  offset);
 
-				GameManager.instance.NoteHit();
-            }
+				if( offset < 0.1)
+				{
+					GameManager.instance.NoteHit( NoteAccuracy.Excellent);
+				}
+				else if ( offset >= 0.1 && offset < 0.2)
+				{
+					GameManager.instance.NoteHit(NoteAccuracy.Good);
+				}
+				else 
+				{
+					GameManager.instance.NoteHit(NoteAccuracy.Poor);
+
+				}
+			}
         }
 	}
 
