@@ -11,6 +11,8 @@ public class GameManager: MonoBehaviour {
 	public BeatScroller theBS;
 
 	public static GameManager instance;
+	
+	public float Score = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -29,11 +31,19 @@ public class GameManager: MonoBehaviour {
 				theMusic.Play();
             }
         }
+		
+		Debug.Log("Score: " + getScore());
+		
 	}
+	
+	public float getScore()
+    {
+	return Score;
+    }
 
 	public void NoteHit()
     {
-		Debug.Log("Hit on Time");
+		Score += 1;
     }
 
 	public void NoteMissed()
