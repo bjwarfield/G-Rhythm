@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class scriptMM : MonoBehaviour
 {
+    /*
+     *  Loads scene 1, the song selection.
+     */
     public void btnStart()
     {
         SceneManager.LoadScene(1);
