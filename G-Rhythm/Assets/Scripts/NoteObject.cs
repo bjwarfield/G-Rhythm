@@ -8,10 +8,11 @@ public class NoteObject : MonoBehaviour
 	public bool canBePressed;
 	public KeyCode keyToPress;
 	public GameManager GameManager;
+	public bool isHit;
 	// Use this for initialization
 	void Start()
 	{
-
+		isHit = false;
 	}
 
 	// Update is called once per frame
@@ -21,7 +22,7 @@ public class NoteObject : MonoBehaviour
 		{
 			if (canBePressed)
 			{
-
+				isHit = true;
 				gameObject.SetActive(false);
 			
 				float offset = Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
@@ -53,11 +54,11 @@ public class NoteObject : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.tag == "Activator")
+		if (other.tag == "Activator" && !isHit)
 		{
 			canBePressed = false;
 
-			//GameManager.instance.NoteMissed();
+			GameManager.instance.NoteMissed();
 		}
 	}
 
