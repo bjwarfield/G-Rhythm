@@ -54,18 +54,21 @@ public class GameManager : MonoBehaviour
 	public void PoorHit()
 	{
 		Score += PoorScore;
+		Debug.Log("Poor Hit");
 		Debug.Log("Score: " + Score);
 	}
 
 	public void GoodHit()
     {
 		Score += GoodScore;
+		Debug.Log("Good Hit!");
 		Debug.Log("Score: " + Score);
     }
 
 	public void ExcellentHit()
     {
 		Score += ExcellentScore;
+		Debug.Log("Excellent Hit!");
 		Debug.Log("Score: " + Score);
 	}
 
