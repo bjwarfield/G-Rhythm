@@ -24,7 +24,7 @@ public class NoteObject : MonoBehaviour
 
 				gameObject.SetActive(false);
 			
-				float offset = -Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
+				float offset = Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
 				Debug.Log("Click Offset: " +  offset);
 
 				if (offset < 1)
