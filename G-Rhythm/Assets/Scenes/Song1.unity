@@ -2142,7 +2142,6 @@ GameObject:
   - component: {fileID: 857528888}
   - component: {fileID: 857528887}
   - component: {fileID: 857528886}
-  - component: {fileID: 857528890}
   m_Layer: 5
   m_Name: GameOverlay
   m_TagString: Untagged
@@ -2244,19 +2243,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &857528890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857528884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bf65bea45ebbc4a9d2940421ee07e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtScore: {fileID: 0}
 --- !u!4 &864020569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8277050118326949795, guid: 0d9e78a6fbe3a8b4fa0bcff8b55d7f0f,
