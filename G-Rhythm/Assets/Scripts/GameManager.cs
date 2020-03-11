@@ -12,7 +12,7 @@ public class GameManager: MonoBehaviour {
 
 	public static GameManager instance;
 	
-	public float Score = 0;
+	public int Score = 0;
 
 	// Use this for initialization
 	void Start () {

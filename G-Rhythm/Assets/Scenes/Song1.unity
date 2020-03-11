@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &93786102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -436,8 +436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 211}
-  m_SizeDelta: {x: 164.9, y: 30.9}
+  m_AnchoredPosition: {x: -118.15, y: 207.32}
+  m_SizeDelta: {x: 164.9, y: 28.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93786103
 MonoBehaviour:
@@ -2142,6 +2142,7 @@ GameObject:
   - component: {fileID: 857528888}
   - component: {fileID: 857528887}
   - component: {fileID: 857528886}
+  - component: {fileID: 857528890}
   m_Layer: 5
   m_Name: GameOverlay
   m_TagString: Untagged
@@ -2243,6 +2244,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &857528890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857528884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bf65bea45ebbc4a9d2940421ee07e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtScore: {fileID: 0}
 --- !u!4 &864020569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8277050118326949795, guid: 0d9e78a6fbe3a8b4fa0bcff8b55d7f0f,
@@ -2494,6 +2508,7 @@ GameObject:
   - component: {fileID: 1207139058}
   - component: {fileID: 1207139060}
   - component: {fileID: 1207139059}
+  - component: {fileID: 1207139061}
   m_Layer: 5
   m_Name: txtScore
   m_TagString: Untagged
@@ -2517,7 +2532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -364.9, y: 210.99998}
+  m_AnchoredPosition: {x: -283.05, y: 208.55}
   m_SizeDelta: {x: 164.9, y: 30.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207139059
@@ -2560,6 +2575,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207139057}
   m_CullTransparentMesh: 0
+--- !u!114 &1207139061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207139057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bf65bea45ebbc4a9d2940421ee07e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtScore: {fileID: 0}
 --- !u!1 &1216484159
 GameObject:
   m_ObjectHideFlags: 0
