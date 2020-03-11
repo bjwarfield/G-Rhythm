@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Song1
+  m_Text: Kira - New World
 --- !u!222 &776776462
 CanvasRenderer:
   m_ObjectHideFlags: 0

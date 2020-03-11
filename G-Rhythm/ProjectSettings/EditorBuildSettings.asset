@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SongSelect.unity
     guid: 4cdbf6c272afbdb499bb44145e988191
   - enabled: 1
-    path: Assets/Scenes/Song1.unity
+    path: Assets/Scenes/Kira - New World.unity
     guid: 657b1616c1351f244a2d99f3099212e4
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 30973caff7718f0468686234057f4c00
+  - enabled: 0
+    path: Assets/Scenes/RJSongUpdateOriginal.unity
+    guid: ea7c798ae8e43a84e8cd984e411c7bb0
   m_configObjects: {}
