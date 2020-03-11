@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetController : MonoBehaviour
+public class ZoneController : MonoBehaviour
 {
     public float rotationFactor;
 

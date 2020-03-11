@@ -6,6 +6,7 @@ public class NoteObject : MonoBehaviour {
 
 	public bool canBePressed;
 	public KeyCode keyToPress;
+    private bool isHit = false;
 	// Use this for initialization
 	void Start () 
 	{
@@ -18,9 +19,23 @@ public class NoteObject : MonoBehaviour {
         {
 			if(canBePressed)
             {
-				gameObject.SetActive(false);
+                float offset = Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
+                isHit = true;
+                gameObject.SetActive(false);
 
-				GameManager.instance.NoteHit();
+                if (offset < 0.1)
+                {
+                    GameManager.instance.NoteHit(1);
+                }
+                else if (offset >= 0.1 && offset < 0.2)
+                {
+                    GameManager.instance.NoteHit(2);
+                }
+                else
+                {
+                    GameManager.instance.NoteHit(3);
+
+                }
             }
         }
 	}
@@ -40,7 +55,7 @@ public class NoteObject : MonoBehaviour {
 	
 	private void OnTriggerExit2D(Collider2D other)
     {
-		if (other.tag == "Activator")
+		if (other.tag == "Activator" && !isHit)
 		{
 			canBePressed = false;
 

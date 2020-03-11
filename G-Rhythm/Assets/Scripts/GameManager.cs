@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class NoteAccuracy
+{
+    public string value;
+    private NoteAccuracy(string value) { this.value = value; }
+//    public static NoteAccuracy Excellent { get { return new NoteAccuracy("Excellent"); } }
+//    public static NoteAccuracy Good { get { return new NoteAccuracy("Good"); } }
+//    public static NoteAccuracy Poor { get { return new NoteAccuracy("Poor"); } }
+
+    public static implicit operator string(NoteAccuracy noteAccuracy) { return noteAccuracy.value; }
+}
+
 public class GameManager: MonoBehaviour {
 
 	public AudioSource theMusic;
-
 	public bool startPlaying;
-
 	public BeatScroller theBS;
-
 	public static GameManager instance;
-	
 	public int Score = 0;
+    public ZoneController zoneController;
 
 	// Use this for initialization
 	void Start () {
@@ -32,21 +40,35 @@ public class GameManager: MonoBehaviour {
             }
         }
 		
-		Debug.Log("Score: " + getScore());
+		//Debug.Log("Score: " + getScore());
 		
 	}
 	
-	public float getScore()
+
+	public int getScore()
     {
 	return Score;
     }
 
-	public void NoteHit()
+	public void NoteHit(int acc)
     {
-		Score += 1;
+
+        if (acc == 1)
+        {
+            Score += 100;
+        }
+        if (acc == 2)
+        {
+            Score += 75;
+        }
+        if (acc == 3)
+        {
+            Score += 50;
+        }
+
     }
 
-	public void NoteMissed()
+    public void NoteMissed()
     {
 		Debug.Log("Missed");
     }
