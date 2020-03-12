@@ -21,11 +21,17 @@ public class GameManager: MonoBehaviour {
 	public static GameManager instance;
 	public int Score = 0;
     public ZoneController zoneController;
+    public HealthBar healthBar; // intialize max health
+    public int currentHealth;
+    public int maxHealth = 40;
 
-	// Use this for initialization
-	void Start () {
-		instance = this;
-	}
+    // Use this for initialization
+    void Start () {
+        instance = this;
+        //Set starting health to half of max health
+        currentHealth = maxHealth / 2;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -56,6 +62,7 @@ public class GameManager: MonoBehaviour {
         if (acc == 1)
         {
             Score += 100;
+            TakeDamage(2);
         }
         if (acc == 2)
         {
@@ -70,6 +77,14 @@ public class GameManager: MonoBehaviour {
 
     public void NoteMissed()
     {
-		Debug.Log("Missed");
+        TakeDamage(-4);
+        Debug.Log("Missed");
     }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth += damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
 }
