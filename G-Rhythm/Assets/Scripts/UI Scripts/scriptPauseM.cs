@@ -8,10 +8,17 @@ public class scriptPauseM : MonoBehaviour
 
     public static bool GamePaused = false;
     public GameObject pauseMenuUI;
+    public AudioSource curAudio;
+
+    void Start()
+    {
+        curAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GamePaused)
@@ -29,6 +36,7 @@ public class scriptPauseM : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        curAudio.Play();            //For Audio
         GamePaused = false;
     }
     //Pauses Game
@@ -36,16 +44,20 @@ public class scriptPauseM : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        curAudio.Pause();           //For Audio
         GamePaused = true;
+        curAudio.Pause();
     }
 
     public void btnSongSelect()
     {
+        curAudio.Stop();            //To reset audio
         SceneManager.LoadScene(1);
     }
 
     public void btnQuit()
     {
+        curAudio.Stop();
         Debug.Log("Quit");
         Application.Quit();
     }
