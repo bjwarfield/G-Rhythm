@@ -49,9 +49,15 @@ public class GameManager: MonoBehaviour {
 				theMusic.Play();
             }
         }
-		
-		//Debug.Log("Score: " + getScore());
-		
+
+        //Debug.Log("Score: " + getScore());
+        checkHealthEnd();
+        if(ENDGAME == true)
+        {
+            startPlaying = false;
+            theBS.hasStarted = false;
+            theMusic.Stop();
+        }
 	}
 	
 
@@ -98,6 +104,7 @@ public class GameManager: MonoBehaviour {
         {
             ENDGAME = true;
             Debug.Log("EndGameTrue");
+
         }
     }
 }
