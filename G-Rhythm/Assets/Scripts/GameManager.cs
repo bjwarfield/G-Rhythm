@@ -25,12 +25,16 @@ public class GameManager: MonoBehaviour {
     public int currentHealth;
     public int maxHealth = 40;
 
+    public bool ENDGAME = false ;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
         instance = this;
         //Set starting health to half of max health
         currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+        ENDGAME = false;
     }
 	
 	// Update is called once per frame
@@ -84,7 +88,16 @@ public class GameManager: MonoBehaviour {
     public void TakeDamage(int damage)
     {
         currentHealth += damage;
+        checkHealthEnd();
         healthBar.SetHealth(currentHealth);
     }
 
+    public void checkHealthEnd ()
+    {
+        if (currentHealth <= 0)
+        {
+            ENDGAME = true;
+            Debug.Log("EndGameTrue");
+        }
+    }
 }

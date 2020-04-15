@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class scriptPauseM : MonoBehaviour
+public class scriptPM : MonoBehaviour
 {
-
     public static bool GamePaused = false;
     public GameObject pauseMenuUI;
 
@@ -25,7 +23,7 @@ public class scriptPauseM : MonoBehaviour
         }
     }
     //Resumes Game
-   public void Resume()
+    void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -37,16 +35,5 @@ public class scriptPauseM : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
-    }
-
-    public void btnSongSelect()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void btnQuit()
-    {
-        Debug.Log("Quit");
-        Application.Quit();
     }
 }
