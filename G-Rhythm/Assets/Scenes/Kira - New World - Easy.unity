@@ -5448,7 +5448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inactiveColor: {r: 1, g: 1, b: 1, a: 0.7529412}
-  attackColorOne: {r: 1, g: 0, b: 0, a: 1}
+  attackColorOne: {r: 1, g: 1, b: 1, a: 1}
   attackColorTwo: {r: 0, g: 0.9999995, b: 1, a: 1}
   AttackTwo: 275
   AttackOne: 276
@@ -13998,10 +13998,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inactiveColor: {r: 1, g: 1, b: 1, a: 0.7529412}
-  attackColorOne: {r: 1, g: 0.5613208, b: 0.93045795, a: 1}
-  attackColorTwo: {r: 0, g: 1, b: 0.010046482, a: 1}
+  attackColorOne: {r: 1, g: 0, b: 0.082383156, a: 1}
+  attackColorTwo: {r: 1, g: 1, b: 1, a: 1}
   AttackTwo: 274
-  AttackOne: 273
+  AttackOne: 276
 --- !u!114 &1173616047
 MonoBehaviour:
   m_ObjectHideFlags: 0
