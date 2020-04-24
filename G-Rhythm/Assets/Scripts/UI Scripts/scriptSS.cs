@@ -12,6 +12,24 @@ public class scriptSS : MonoBehaviour
 
     public void btnSong1()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
+    public void btnSong2()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void btnSong3()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void btnSong4()
+    {
+        SceneManager.LoadScene(6);
+    }
+    public void btnSong5()
+    {
+        SceneManager.LoadScene(7);
+    }
+
 }

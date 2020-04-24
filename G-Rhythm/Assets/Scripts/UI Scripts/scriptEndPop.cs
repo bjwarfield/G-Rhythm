@@ -9,43 +9,47 @@ public class scriptEndPop : MonoBehaviour
 {
     public static bool GameEnd = false;
     public GameObject endGamePopUp;
-    public Text txtEndScore;
+    public int EndScore;
     public string name;
+    public InputField infieldName;    
 
     void Start()
     {
-//        
     }
     // Update is called once per frame
     void Update()
     {
-        /*
-         * if hpBar or end note is true
-         */
-    //    txtEndScore = GetComponent<Text>();
-        //      txtEndScore.text = "Score: " + GameManager.instance.getScore().ToString();
-        showEndPop();
+        if(FindObjectOfType<GameManager>().getENDGAME()==true)
+               showEndPop();
 
     }
 
     void showEndPop()
-    {
-        endGamePopUp.SetActive(false);
-        Time.timeScale = 1f;
-        GameEnd = false;
-    }
-
-    void hideEndPop()
     {
         endGamePopUp.SetActive(true);
         Time.timeScale = 0f;
         GameEnd = true;
     }
 
+    void hideEndPop()
+    {
+        endGamePopUp.SetActive(false);
+        Time.timeScale = 1f;
+        GameEnd = false;
+    }
+    
+    public void btnSkip()
+    {
+        hideEndPop();
+        SceneManager.LoadScene(2);
+
+    }
     public void btnSubmit()
     {
-        SceneManager.LoadScene(2);
         hideEndPop();
+        EndScore = FindObjectOfType<GameManager>().getScore();
+        name = infieldName.text;
+        SceneManager.LoadScene(2);
     }
 
     public string getName()

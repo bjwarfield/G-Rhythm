@@ -60,10 +60,24 @@ public class GameManager: MonoBehaviour {
         }
 	}
 	
+    public bool getENDGAME()
+    {
+        return ENDGAME;
+    }
 
 	public int getScore()
     {
 	return Score;
+    }
+
+    public void pauseMusic()
+    {
+        theMusic.Pause();
+    }
+
+    public void playMusic()
+    {
+        theMusic.Play();
     }
 
 	public void NoteHit(int acc)

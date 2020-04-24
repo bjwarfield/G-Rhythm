@@ -17,10 +17,12 @@ public class scriptPauseM : MonoBehaviour
             if (GamePaused)
             {
                 Resume();
+                FindObjectOfType<GameManager>().playMusic();
             }
             else
             {
                 Pause();
+                FindObjectOfType<GameManager>().pauseMusic();
             }
         }
     }
