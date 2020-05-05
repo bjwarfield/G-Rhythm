@@ -17,26 +17,26 @@ public class NoteObject : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(keyToPress))
         {
-			if(canBePressed)
-            {
-                float offset = Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
-                isHit = true;
-                gameObject.SetActive(false);
+				if (canBePressed)
+				{
+					float offset = Mathf.Abs(this.transform.position.x - GameManager.instance.zoneController.transform.position.x);
+					isHit = true;
+					gameObject.SetActive(false);
 
-                if (offset < 0.1)
-                {
-                    GameManager.instance.NoteHit(1);
-                }
-                else if (offset >= 0.1 && offset < 0.2)
-                {
-                    GameManager.instance.NoteHit(2);
-                }
-                else
-                {
-                    GameManager.instance.NoteHit(3);
-
-                }
-            }
+					if (offset < 0.1)
+					{
+						GameManager.instance.NoteHit(1);
+					}
+					else if (offset >= 0.1 && offset < 0.2)
+					{
+						GameManager.instance.NoteHit(2);
+					}
+					else
+					{
+						GameManager.instance.NoteHit(3);
+					}
+				}
+            
         }
 	}
 

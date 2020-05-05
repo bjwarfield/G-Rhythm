@@ -82,7 +82,6 @@ public class GameManager: MonoBehaviour {
 
 	public void NoteHit(int acc)
     {
-
         if (acc == 1)
         {
             Score += 100;
@@ -96,7 +95,11 @@ public class GameManager: MonoBehaviour {
         {
             Score += 50;
         }
+    }
 
+    public void LongHit()
+    {
+        Score += 1;
     }
 
     public void NoteMissed()
