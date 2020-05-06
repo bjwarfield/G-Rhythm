@@ -12,12 +12,13 @@ public class scriptGameUI : MonoBehaviour
     void Start()
     {
         txtScore = GetComponent<Text>();
+        txtPlayerName = GetComponent<Text>();
     }
 
     void Update()
     {
         txtScore.text = "Score: " + GameManager.instance.getScore().ToString();
-        //txtPlayerName = FindObjectOfType<endGamePopUp.getName();
+        txtPlayerName.text = GetComponent<scriptEndPop>().getName().ToString();
     }
 
     public void btnBack()
