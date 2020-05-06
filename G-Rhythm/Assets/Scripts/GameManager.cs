@@ -82,6 +82,11 @@ public class GameManager: MonoBehaviour {
         return ENDGAME;
     }
 
+    public void setENDGAME()
+    {
+        ENDGAME = true;
+    }
+
 	public int getScore()
     {
 	return Score;
@@ -144,4 +149,10 @@ public class GameManager: MonoBehaviour {
 
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        setENDGAME();
+    }
+
 }
