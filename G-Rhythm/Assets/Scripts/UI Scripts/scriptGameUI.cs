@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class scriptGameUI : MonoBehaviour
 {
     public Text txtScore;
- 
+
     void Start()
     {
         txtScore = GetComponent<Text>();

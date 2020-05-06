@@ -8,9 +8,10 @@ public class ButtonController : MonoBehaviour {
     //public Sprite defaultImage;
     //public Sprite pressedImage;
     public Color inactiveColor;
-    public Color attackColor;
-    public KeyCode AttackKey;
-
+    public Color attackColorOne;
+    public Color attackColorTwo;
+	public KeyCode AttackTwo;
+	public KeyCode AttackOne;
 	// Use this for initialization
 	void Start () {
 		theSR = GetComponent<SpriteRenderer>();
@@ -18,16 +19,31 @@ public class ButtonController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(AttackKey))
+
+
+
+		if(Input.GetKeyDown(AttackOne))
         {
             //theSR.sprite = pressedImage;
-            theSR.color = attackColor;
+            theSR.color = attackColorOne;
+        }
+		if(Input.GetKeyDown(AttackTwo))
+		{
+            //theSR.sprite = pressedImage;
+            theSR.color = attackColorTwo;
         }
 
-		if (Input.GetKeyUp(AttackKey))
+		if (Input.GetKeyUp(AttackOne))
 		{
             //theSR.sprite = defaultImage;
             theSR.color = inactiveColor;
         }
+
+		if (Input.GetKeyUp(AttackTwo))
+		{
+            //theSR.sprite = defaultImage;
+            theSR.color = inactiveColor;
+        }
+		
 	}
 }
