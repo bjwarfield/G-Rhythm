@@ -24,29 +24,14 @@ public class GameManager: MonoBehaviour {
     public HealthBar healthBar; // intialize max health
     public int currentHealth;
     public int maxHealth = 40;
-
-    private AudioSource audioSource;
-    public AudioClip[] impactClips;
-
-    public Transform pf_accPopup;
+    public int combo = 0;
+    public int longCombo = 0;
+    public int maxCombo = 0;
     public bool ENDGAME = false ;
 
-    public static Transform getAccPopup
-    {
-        get
-        {
-            return instance.pf_accPopup;
-        }
-    }
-
-    private void Awake()
-    {
-        instance = this;
-    }
     // Use this for initialization
     void Start() {
-
-        audioSource = GetComponent<AudioSource>();
+        instance = this;
         //Set starting health to half of max health
         currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
@@ -68,6 +53,7 @@ public class GameManager: MonoBehaviour {
         }
 
         //Debug.Log("Score: " + getScore());
+        checkMaxCombo();
         checkHealthEnd();
         if(ENDGAME == true)
         {
@@ -76,15 +62,19 @@ public class GameManager: MonoBehaviour {
             theMusic.Stop();
         }
 	}
-	
+
+    public void checkMaxCombo() {
+        if (combo >= maxCombo) { maxCombo = combo; }
+    }
+
+    public int getMaxCombo()
+    {
+        return maxCombo;
+    }
+
     public bool getENDGAME()
     {
         return ENDGAME;
-    }
-
-    public void setENDGAME()
-    {
-        ENDGAME = true;
     }
 
 	public int getScore()
@@ -92,6 +82,10 @@ public class GameManager: MonoBehaviour {
 	return Score;
     }
 
+    public int getCombo()
+    {
+        return combo;
+    }
     public void pauseMusic()
     {
         theMusic.Pause();
@@ -104,31 +98,36 @@ public class GameManager: MonoBehaviour {
 
 	public void NoteHit(int acc)
     {
-        audioSource.clip = impactClips[Random.Range(0, impactClips.Length)];
-        audioSource.Play();
-
         if (acc == 1)
         {
+            combo += 1;
             Score += 100;
             TakeDamage(2);
         }
         if (acc == 2)
         {
+            combo += 1;
             Score += 75;
         }
         if (acc == 3)
         {
+            combo += 1;
             Score += 50;
         }
     }
 
     public void LongHit()
     {
+        longCombo += 1;
+        if (longCombo >= 50) { combo += 1;
+            longCombo = 0;
+        }
         Score += 1;
     }
 
     public void NoteMissed()
     {
+        combo = 0;
         TakeDamage(-4);
         Debug.Log("Missed");
     }
@@ -149,10 +148,4 @@ public class GameManager: MonoBehaviour {
 
         }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        setENDGAME();
-    }
-
 }

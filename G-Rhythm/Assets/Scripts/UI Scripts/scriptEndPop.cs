@@ -31,11 +31,6 @@ public class scriptEndPop : MonoBehaviour
         GameEnd = true;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        FindObjectOfType<GameManager>().setENDGAME();
-    }
-
     void hideEndPop()
     {
         endGamePopUp.SetActive(false);
