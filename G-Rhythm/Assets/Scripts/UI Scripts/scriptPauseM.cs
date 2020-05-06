@@ -17,7 +17,6 @@ public class scriptPauseM : MonoBehaviour
             if (GamePaused)
             {
                 Resume();
-                FindObjectOfType<GameManager>().playMusic();
             }
             else
             {
@@ -32,6 +31,7 @@ public class scriptPauseM : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
+        FindObjectOfType<GameManager>().playMusic();
     }
     //Pauses Game
     void Pause()

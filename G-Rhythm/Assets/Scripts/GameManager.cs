@@ -63,6 +63,11 @@ public class GameManager: MonoBehaviour {
         }
 	}
 
+    public void setENDGAME()
+    {
+        ENDGAME = true;
+    }
+
     public void checkMaxCombo() {
         if (combo >= maxCombo) { maxCombo = combo; }
     }

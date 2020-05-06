@@ -41,6 +41,7 @@ public class scriptEndPop : MonoBehaviour
     public void btnSkip()
     {
         hideEndPop();
+        name = "Current Player";
         SceneManager.LoadScene(2);
 
     }

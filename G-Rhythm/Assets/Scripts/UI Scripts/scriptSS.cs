@@ -32,4 +32,9 @@ public class scriptSS : MonoBehaviour
         SceneManager.LoadScene(7);
     }
 
+    public void btnSong6()
+    {
+        SceneManager.LoadScene(8);
+    }
+
 }
