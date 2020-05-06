@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scriptGameCombo:MonoBehaviour
+public class scriptGameCombo : MonoBehaviour
 {
     public Text txtCombo;
 
@@ -17,9 +17,9 @@ public class scriptGameCombo:MonoBehaviour
         txtCombo.text = "";
         if (GameManager.instance.getCombo() > 0)
         {
-              txtCombo.text = GameManager.instance.getCombo().ToString();
+            txtCombo.text = GameManager.instance.getCombo().ToString();
         }
-      
+
     }
 
 }

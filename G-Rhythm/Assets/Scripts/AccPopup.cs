@@ -5,7 +5,7 @@ using TMPro;
 
 public class AccPopup : MonoBehaviour
 {
-
+    //comment
     private TextMeshPro textMesh;
     private Color textMeshColor;
     public float moveYspeed = 0f;
