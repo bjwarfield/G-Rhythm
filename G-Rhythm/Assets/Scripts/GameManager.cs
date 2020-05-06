@@ -25,11 +25,28 @@ public class GameManager: MonoBehaviour {
     public int currentHealth;
     public int maxHealth = 40;
 
+    private AudioSource audioSource;
+    public AudioClip[] impactClips;
+
+    public Transform pf_accPopup;
     public bool ENDGAME = false ;
 
+    public static Transform getAccPopup
+    {
+        get
+        {
+            return instance.pf_accPopup;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Use this for initialization
     void Start() {
-        instance = this;
+
+        audioSource = GetComponent<AudioSource>();
         //Set starting health to half of max health
         currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
@@ -82,6 +99,9 @@ public class GameManager: MonoBehaviour {
 
 	public void NoteHit(int acc)
     {
+        audioSource.clip = impactClips[Random.Range(0, impactClips.Length)];
+        audioSource.Play();
+
         if (acc == 1)
         {
             Score += 100;
