@@ -23,19 +23,22 @@ public class NoteObject : MonoBehaviour {
 					isHit = true;
 					gameObject.SetActive(false);
 
-					if (offset < 0.1)
+					if (offset < 0.5)
 					{
 						GameManager.instance.NoteHit(1);
+                        AccPopup.Create(transform.position, "Excellent", Color.green);
 					}
-					else if (offset >= 0.1 && offset < 0.2)
+					else if (offset >= 0.5 && offset < 1)
 					{
 						GameManager.instance.NoteHit(2);
-					}
-					else
-					{
+                        AccPopup.Create(transform.position, "Good", Color.yellow);
+                }
+                else
+				{
 						GameManager.instance.NoteHit(3);
-					}
-				}
+                        AccPopup.Create(transform.position, "Poor", Color.red);
+                }
+            }
             
         }
 	}
