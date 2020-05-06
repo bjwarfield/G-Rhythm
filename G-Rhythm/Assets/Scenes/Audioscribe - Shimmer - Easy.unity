@@ -2653,7 +2653,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2806,7 +2805,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3783,7 +3781,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3963,7 +3960,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4695,7 +4691,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10846,10 +10841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inactiveColor: {r: 1, g: 1, b: 1, a: 0.7529412}
-  attackColorOne: {r: 1, g: 0, b: 0, a: 1}
-  attackColorTwo: {r: 0, g: 0.9999995, b: 1, a: 1}
-  AttackTwo: 275
-  AttackOne: 276
+  attackColor: {r: 0, g: 0, b: 0, a: 0}
+  AttackKey: 0
 --- !u!212 &492721616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16610,7 +16603,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17112,7 +17104,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18250,7 +18241,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18843,7 +18833,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.09411765}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20041,6 +20030,7 @@ GameObject:
   - component: {fileID: 947374317}
   - component: {fileID: 947374316}
   - component: {fileID: 947374315}
+  - component: {fileID: 947374318}
   m_Layer: 0
   m_Name: NinjaGirl_Sprite
   m_TagString: Untagged
@@ -20076,6 +20066,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOne: 275
   attackTwo: 276
+  swingSounds:
+  - {fileID: 8300000, guid: 0063b2de49e21cc4a9caae7c2d952ca3, type: 3}
+  - {fileID: 8300000, guid: 77ec762e2c20d8c42a8db830d812108a, type: 3}
+  - {fileID: 8300000, guid: 80746e21557952c4c9710c45a5905787, type: 3}
 --- !u!95 &947374316
 Animator:
   serializedVersion: 3
@@ -20145,6 +20139,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &947374318
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947374313}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &952199701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20390,7 +20480,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20711,6 +20800,14 @@ MonoBehaviour:
   healthBar: {fileID: 789956712}
   currentHealth: 0
   maxHealth: 20
+  impactClips:
+  - {fileID: 8300000, guid: 14d903f6622608743b35c2e130c2b51b, type: 3}
+  - {fileID: 8300000, guid: e53bbd75bad97804aa50dbfb4ca38196, type: 3}
+  - {fileID: 8300000, guid: e40ff4bbddd4e284eac9a5617b930d71, type: 3}
+  - {fileID: 8300000, guid: d580be76bcf50d94b81ba515b14dc467, type: 3}
+  - {fileID: 8300000, guid: d9e80bb76e45d6a46a85f99f8a2ee7fc, type: 3}
+  pf_accPopup: {fileID: 127428504683238745, guid: 5d46c8b8d5bc27242bf111264ff4e977,
+    type: 3}
   ENDGAME: 0
 --- !u!1001 &974282562
 PrefabInstance:
@@ -22668,7 +22765,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23901,7 +23997,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.09411765}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25460,10 +25555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inactiveColor: {r: 1, g: 1, b: 1, a: 0.7529412}
-  attackColorOne: {r: 1, g: 0.5613208, b: 0.93045795, a: 1}
-  attackColorTwo: {r: 0, g: 1, b: 0.010046482, a: 1}
-  AttackTwo: 274
-  AttackOne: 273
+  attackColor: {r: 0, g: 0, b: 0, a: 0}
+  AttackKey: 0
 --- !u!114 &1173616047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26133,7 +26226,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -33869,7 +33961,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -38377,7 +38468,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42687,7 +42777,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43727,7 +43816,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
