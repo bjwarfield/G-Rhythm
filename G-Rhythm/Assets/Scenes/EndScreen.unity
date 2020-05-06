@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtScore: {fileID: 0}
+  txtPlayerName: {fileID: 0}
 --- !u!1 &471029828
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +905,7 @@ GameObject:
   - component: {fileID: 1690319356}
   - component: {fileID: 1690319355}
   - component: {fileID: 1690319354}
+  - component: {fileID: 1690319357}
   m_Layer: 5
   m_Name: endScreen
   m_TagString: Untagged
@@ -991,6 +993,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1690319357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690319352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bf65bea45ebbc4a9d2940421ee07e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtScore: {fileID: 192294626}
+  txtPlayerName: {fileID: 1734165283}
 --- !u!1 &1734165281
 GameObject:
   m_ObjectHideFlags: 0

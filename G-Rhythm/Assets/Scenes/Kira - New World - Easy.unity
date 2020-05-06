@@ -8429,6 +8429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtScore: {fileID: 0}
+  txtPlayerName: {fileID: 0}
 --- !u!114 &655743944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13171,6 +13172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f20a1a1c425d141a0dced97602c692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactClips: []
+  pf_accPopup: {fileID: 0}
   theMusic: {fileID: 831301300}
   startPlaying: 0
   theBS: {fileID: 1824701160}
@@ -15795,7 +15798,7 @@ MonoBehaviour:
   endGamePopUp: {fileID: 534430246}
   EndScore: 0
   name: 
-  infieldName: {fileID: 0}
+  infieldName: {fileID: 120692200}
 --- !u!114 &1222876371
 MonoBehaviour:
   m_ObjectHideFlags: 0

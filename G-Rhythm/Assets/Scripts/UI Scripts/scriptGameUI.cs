@@ -17,7 +17,7 @@ public class scriptGameUI : MonoBehaviour
     void Update()
     {
         txtScore.text = "Score: " + GameManager.instance.getScore().ToString();
-        txtPlayerName = FindObjectOfType<endGamePopUp>().getName();
+        //txtPlayerName = FindObjectOfType<endGamePopUp.getName();
     }
 
     public void btnBack()

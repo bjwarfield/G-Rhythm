@@ -15,7 +15,11 @@ public class NoteAccuracy
 
 public class GameManager: MonoBehaviour {
 
-	public AudioSource theMusic;
+    private AudioSource audioSource;
+    public AudioClip[] impactClips;
+    public Transform pf_accPopup;
+
+    public AudioSource theMusic;
 	public bool startPlaying;
 	public BeatScroller theBS;
 	public static GameManager instance;
@@ -29,10 +33,23 @@ public class GameManager: MonoBehaviour {
     public int maxCombo = 0;
     public bool ENDGAME = false ;
 
+    public static Transform getAccPopup
+    {
+        get
+        {
+            return instance.pf_accPopup;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Use this for initialization
     void Start() {
-        instance = this;
         //Set starting health to half of max health
+        audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);

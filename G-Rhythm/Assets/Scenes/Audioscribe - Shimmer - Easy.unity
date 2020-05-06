@@ -2638,6 +2638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtScore: {fileID: 0}
+  txtPlayerName: {fileID: 0}
 --- !u!114 &135746371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21192,6 +21193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f20a1a1c425d141a0dced97602c692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactClips: []
+  pf_accPopup: {fileID: 0}
   theMusic: {fileID: 1316256679}
   startPlaying: 0
   theBS: {fileID: 1824701160}
@@ -21200,6 +21203,9 @@ MonoBehaviour:
   healthBar: {fileID: 789956712}
   currentHealth: 0
   maxHealth: 20
+  combo: 0
+  longCombo: 0
+  maxCombo: 0
   ENDGAME: 0
 --- !u!1 &974040456
 GameObject:
@@ -21233,6 +21239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70733010d31a4af41bc1261eacc1b4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGamePopUp: {fileID: 523158465}
+  EndScore: 0
+  name: 
+  infieldName: {fileID: 814010526}
 --- !u!114 &974040458
 MonoBehaviour:
   m_ObjectHideFlags: 0
