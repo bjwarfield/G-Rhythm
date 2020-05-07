@@ -10,7 +10,7 @@ public class scriptEndPop : MonoBehaviour
     public static bool GameEnd = false;
     public GameObject endGamePopUp;
     public int EndScore;
-    public string name;
+    public string curname;
     public InputField infieldName;    
 
     void Start()
@@ -47,13 +47,16 @@ public class scriptEndPop : MonoBehaviour
     {
         hideEndPop();
         SceneManager.LoadScene(2);
+        GameManager.instance.setName("CurrentPlayer");
+       // name = "Current Player";
 
     }
     public void btnSubmit()
     {
         hideEndPop();
         EndScore = FindObjectOfType<GameManager>().getScore();
-        name = infieldName.text;
+        curname = infieldName.text;
+        GameManager.instance.setName(curname);
         SceneManager.LoadScene(2);
     }
 

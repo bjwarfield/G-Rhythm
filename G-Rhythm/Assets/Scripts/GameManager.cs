@@ -27,6 +27,7 @@ public class GameManager: MonoBehaviour {
     public int combo = 0;
     public int longCombo = 0;
     public int maxCombo = 0;
+    public string name;
 
     private AudioSource audioSource;
     public AudioClip[] impactClips;
@@ -146,7 +147,15 @@ public class GameManager: MonoBehaviour {
         TakeDamage(-4);
         Debug.Log("Missed");
     }
+    public void setName(string inname)
+    {
+        name = inname;
+    }
 
+    public string getName()
+    {
+        return name;
+    }
     public void TakeDamage(int damage)
     {
         currentHealth += damage;

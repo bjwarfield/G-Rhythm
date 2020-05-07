@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Kira - New World - Hard.unity
     guid: bd3bcfac84bfee74a947356a3024df34
   - enabled: 1
+    path: Assets/Scenes/Audioscribe - Shimmer - Easy.unity
+    guid: 661071cfaeb6b9c4ea39692cb612f85c
+  - enabled: 1
     path: Assets/Scenes/Audioscribe - Shimmer - Normal.unity
-    guid: 5d03ffed8126855418fe69bf65a3becd
+    guid: 1ccc06b158b131748bc8c50ebed9b710
+  - enabled: 1
+    path: Assets/Scenes/Audioscribe - Shimmer - Hard.unity
+    guid: a58546bc3aa9bd04c98d74a64edaaa94
   m_configObjects: {}
